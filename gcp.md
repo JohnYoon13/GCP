@@ -68,7 +68,7 @@ print(response)
 ```
 
 ### The results should include the expected data (__test 123__), as well as the ack_id, message_id, and publish_time. 
-```json
+```javascript
 
 received_messages {
   ack_id: "ABC-DEFG"
