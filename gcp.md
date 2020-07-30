@@ -27,7 +27,7 @@ Prior to any implementation, first verify that the necessary [permissions](https
 ## Topics & Subscriptions
 In following with the [Pub/Sub](https://cloud.google.com/pubsub/architecture) paradigm, a pipeline consisting of a [topic](https://cloud.google.com/pubsub/docs/admin#managing_topics) and corresponding [subscription](https://cloud.google.com/pubsub/docs/admin#manage_subs) must possess data flowing through it. 
 
-![](https://github.com/JohnYoon13/GCP/blob/master/images/image1.png) 
+![](https://github.com/JohnYoon13/GCP/blob/master/images/pubsub.png) 
 
 For the purposes of this guide, a sample topic labeled, __demo-topic__, and a sample subscription labeled, __demo-subscription__, have been created. Using [cloudscheduler](https://cloud.google.com/scheduler/docs/quickstart), a string (named __test 123__) is sent to __demo-topic__ every 10 minutes. This is the data that will later undergo a transformation and ship out to the BigQuery table.
 
