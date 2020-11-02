@@ -19,6 +19,9 @@ This tutorial will explore a practical and common use case implemented in Python
 
 # **Prerequisites**
 
+This guide is intended for new users of Google Cloud Platform's Pub/Sub & BigQuery who possess some familiarity with Google Cloud products and software development. In order to properly use this guide, you will require a Google account and access to a Google Cloud project.
+
+
 ## Permissions
 Prior to any implementation, first verify that the necessary [permissions](https://cloud.google.com/iam/docs/permissions-reference) and [roles](https://cloud.google.com/iam/docs/understanding-roles) are established for the project. This can range from topics and subscriptions, to BigQuery, to whichever service holds and runs the source code, i.e., cloud functions.
 
