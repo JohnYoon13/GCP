@@ -21,9 +21,8 @@ This tutorial will explore a practical and common use case implemented in Python
 
 This guide is intended for new users of Google Cloud Platform's Pub/Sub & BigQuery who possess some familiarity with Google Cloud products and software development. In order to properly use this guide, you will require a Google account and access to a Google Cloud project.
 
-
 ## Permissions
-Prior to any implementation, first verify that the necessary [permissions](https://cloud.google.com/iam/docs/permissions-reference) and [roles](https://cloud.google.com/iam/docs/understanding-roles) are established for the project. This can range from topics and subscriptions, to BigQuery, to whichever service holds and runs the source code, i.e., cloud functions.
+Prior to any implementation, first verify that the necessary [permissions](https://cloud.google.com/iam/docs/permissions-reference) and [roles](https://cloud.google.com/iam/docs/understanding-roles) are established for the project. This can range from topics and subscriptions to BigQuery to whichever service holds and runs the source code, i.e., cloud functions.
 
 ***Note: This process may require coordination with project owners and administrators
 
@@ -32,7 +31,7 @@ In following with the [Pub/Sub](https://cloud.google.com/pubsub/architecture) pa
 
 ![](https://github.com/JohnYoon13/GCP/blob/master/images/pubsub.png) 
 
-A sample topic labeled, __demo-topic__, and a sample subscription labeled, __demo-subscription__, have been created for this guide. [Cloudscheduler](https://cloud.google.com/scheduler/docs/quickstart), sends a string (named __test 123__) to __demo-topic__ every 10 minutes. This is the data that will later undergo a transformation and ship out to the BigQuery table.
+A sample topic labeled __demo-topic__ and a sample subscription labeled __demo-subscription__ have been created for this guide. [Cloudscheduler](https://cloud.google.com/scheduler/docs/quickstart) sends a string (named __test 123__) to __demo-topic__ every 10 minutes. This is the data that will later undergo a transformation and ship out to the BigQuery table.
 
 ## BigQuery Table
 After minor modifications, the sample string will enter a [BigQuery](https://cloud.google.com/bigquery/docs/quickstarts/quickstart-web-ui) table. Therefore, this workflow requires a table that can receive the incoming data. For this demonstration, a table (named __demo_results__) already exists with two fields: 
@@ -110,7 +109,7 @@ transformed_word = word.upper()
 transformed_number = ''.join(str(int(x) * 10) for x in number)
 ```
 
-### Concatenate all the modified data parts, and append it to the new answer list. Display the final manipulated data results, which should show, __TEST 102030__.
+### Concatenate all the modified data parts, and append it to the new answer list. Display the final manipulated data results, which should show: __TEST 102030__.
 ```python
 #appends all the modified data in a combined format into a new list
 new_answer = []
